@@ -1,0 +1,21 @@
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+    <div class="showBooks">
+        <h1>List of Books</h1>
+        <% if (allBooks.length > 0) { %>
+            <ul>
+                <% allBooks.forEach((book) => { %>
+                <li>
+                    <h2>Title: <%= book.bookTitle %></h2>
+                    <h3>By: <%= book.bookAuthor %></h3>
+                    <p>Summary: <%= book.summary %></p>
+                </li>
+                <% }) %>
+            </ul>
+        <% } else { %>
+        <h2>No Books Found</h2>
+    <% } %>
+    </div>
+
+<%- include('includes/end.ejs') %> 
