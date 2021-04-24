@@ -1,36 +1,55 @@
 body {
     background-color: green;
 }
+h1 {
+    color:white;
+}
+
 .bookInfo {
     margin-left: 1rem;
+    
     
 }
 form {
     display:flex;
     flex-direction: column;
+    
 }
 form label {
     display:block;
     padding-top:1rem;
+    font-size: 2rem;
+    color:white;
+    
 }
 form input, form label textarea {
     display:block;
+    font-size: 2rem;
+    
+
 }
 button {
-    width:100px;
+    width:150px;
     margin-left:0;
     margin-top:1rem;
     border-radius:10px;
     border:2px solid black;
+    font-size: 2rem;
     /*background-color: rgba(0, 128, 0, 0.1);*/
 }
 .showBooks {
     margin-left: 1rem;
+    max-width:400px;
+    
+}
+.showBooks h1 {
+    /*margin-left:1rem;*/
+    text-align: center;
 }
 ul {
     display: flex;
     flex-direction: column;
-    max-width:400px;
+    /*max-width:400px;*/
     border:1px solid black;
     border-radius: 10px;
     background-color: white;
@@ -43,5 +62,6 @@ li {
     border-bottom:1px solid black;
     padding:.25rem;
     margin-right:2rem;
+    margin-bottom:.25rem;
     
 }
