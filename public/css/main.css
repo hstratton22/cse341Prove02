@@ -24,7 +24,8 @@ form label {
 }
 form input, form label textarea {
     display:block;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width:300px;
     
 
 }
@@ -46,7 +47,7 @@ button {
     /*margin-left:1rem;*/
     text-align: center;
 }
-ul {
+.showBooks ul {
     display: flex;
     flex-direction: column;
     /*max-width:400px;*/
@@ -57,11 +58,14 @@ ul {
 
 
 }
-li {
+.showBooks li {
     list-style-type: none;
     border-bottom:1px solid black;
     padding:.25rem;
     margin-right:2rem;
     margin-bottom:.25rem;
     
+}
+::placeholder {
+    color: gray;
 }
