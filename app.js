@@ -16,7 +16,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res, next) => {
     console.log("in get");
     res.render('index', {
-        pageTitle: "Add Book"
+        pageTitle: "Add Book", 
+        p: '/'
 
     });
 
@@ -31,6 +32,7 @@ app.post('/output', (req, res, next) => {
     console.log(allBooks);
     res.render('catalog', {
         pageTitle: "Books catalog", 
+        p: '/catalog',
         //title: title,
         //sum: sum,
         allBooks: allBooks,
@@ -39,4 +41,12 @@ app.post('/output', (req, res, next) => {
 
 
 });
+app.get('/catalog', (req, res, next) => {
+    res.render('catalog', {
+        pageTitle: "Books catalog", 
+        allBooks: allBooks,
+        p: '/catalog'
+
+    });
+})
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
